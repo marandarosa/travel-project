@@ -55,7 +55,7 @@ header a {
   margin-top: 25px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 912px) {
   header {
     padding: 50px 0px;
   }
@@ -68,6 +68,125 @@ header a {
   header h4 {
     font-size: 14px;
   }
+}
+
+main {
+  background-color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 25px;
+}
+
+@media (max-width: 540px) {
+  main h3 {
+    font-size: 14px;
+    margin-top: 0;
+  }
+  main p {
+    font-size: 10px;
+  }
+}
+
+main .main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  padding: 25px 25px;
+}
+
+.main-grid img {
+  width: 100%;
+  justify-items: center;
+}
+
+div.secondary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+@media (max-width: 820px) {
+  div.secondary-grid {
+    display: block;
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 400px) {
+  div.secondary-grid {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 540px) {
+  div.secondary-grid {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}
+
+.destinations-header h2 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.destinations-grid h3 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.grand-canyon {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/grandcanyon.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 75px 0px;
+  text-align: center;
+}
+
+.rocky-mtn {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/rocky-mtns.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 75px 0px;
+  text-align: center;
+}
+
+.white-sands {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/white-sands-national-park.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 75px 0px;
+  text-align: center;
+}
+
+.zion {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/zion-natl-park.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 75px 0px;
+  text-align: center;
+}
+
+.grand-canyon a,
+.rocky-mtn a,
+.white-sands a,
+.zion a {
+  color: white;
+  text-decoration: none;
 }
 
 footer {
@@ -88,14 +207,12 @@ footer {
 footer .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 24px;
+  padding: 10px 10px;
 }
 
 footer h4 {
   letter-spacing: 1px;
-}
-
-footer div {
-  padding: 10px 10px 0px 10px;
 }
 
 footer ul {
