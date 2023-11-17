@@ -1,9 +1,20 @@
+:root {
+  --main-color: #000917;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #000917;
+  background-color: var(--main-color);
 }
 
 .container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+header,
+main,
+footer {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -48,9 +59,9 @@ header a {
   font-size: 14px;
   text-decoration: none;
   background-color: white;
-  color: black;
+  color: var(--main-color);
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid var(--main-color);
   padding: 15px 25px;
   margin-top: 25px;
 }
@@ -68,13 +79,6 @@ header a {
   header h4 {
     font-size: 14px;
   }
-}
-
-main {
-  background-color: white;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 25px;
 }
 
 @media (max-width: 540px) {
@@ -103,7 +107,6 @@ div.secondary-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 5px;
 }
 
 .main-paragraph {
@@ -133,66 +136,76 @@ div.secondary-grid {
   }
 }
 
-.destinations-header h2 {
-  text-align: center;
-  margin-bottom: 0;
-}
-
-.destinations-grid h3 {
-  text-align: center;
-  margin-bottom: 0;
-}
-
-.destinations-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 5px;
-  max-width: 85%;
+section.intro {
+  background-color: white;
   margin: 0 auto;
 }
 
-.grand-canyon {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
-    url(../images/grandcanyon.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 75px 0px;
+section.destinations {
+  background-color: #a8cdf8;
+  margin: 0 auto;
+  padding: 35px 15px;
   text-align: center;
 }
 
-.rocky-mtn {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
-    url(../images/rocky-mtns.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 75px 0px;
-  text-align: center;
+.destinations-header h2 {
+  padding-bottom: 15px;
 }
 
-.white-sands {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
-    url(../images/white-sands-national-park.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 75px 0px;
+.destinations-header h2,
+.destinations h3 {
   text-align: center;
+  margin: 0 auto;
 }
 
-.zion {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
-    url(../images/zion-natl-park.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 75px 0px;
-  text-align: center;
+.destinations ul li {
+  font-size: 14px;
+  text-align: left;
+  margin: 0 auto;
+  padding: 0px 25px 0px 0px;
 }
 
-.grand-canyon a,
-.rocky-mtn a,
-.white-sands a,
-.zion a {
+section .destination-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.card {
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  margin: 5px 5px;
+  padding-bottom: 25px;
+}
+
+.card-footer {
+  padding-top: 10px;
+}
+
+.card p {
+  padding: 0px 10px;
+}
+
+.card-footer a {
+  background-color: var(--main-color);
   color: white;
   text-decoration: none;
+  padding: 10px 35px;
+}
+
+.card-footer a:hover {
+  color: var(--main-color);
+  background-color: #a8cdf8;
+  transition: all 150ms ease-in-out;
+}
+
+@media (max-width: 1024px) {
+  section .destination-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+  }
 }
 
 footer {
@@ -200,8 +213,6 @@ footer {
     url("../images/az_mtns.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  max-width: 1200px;
-  margin: 0 auto;
   font-size: 14px;
   font-weight: 300;
   position: relative;
@@ -213,7 +224,6 @@ footer {
 footer .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  grid-gap: 24px;
   padding: 10px 10px;
 }
 
