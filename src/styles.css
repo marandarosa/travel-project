@@ -91,6 +91,11 @@ header a {
   }
 }
 
+.main-paragraph h3 {
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
 main .main-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -103,18 +108,8 @@ main .main-grid {
   justify-items: center;
 }
 
-div.secondary-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-
-.main-paragraph {
-  font-size: 20px;
-}
-
 @media (max-width: 820px) {
-  div.secondary-grid {
+  div.main-grid {
     display: block;
   }
 }
@@ -141,18 +136,18 @@ section.intro {
   margin: 0 auto;
 }
 
-section.destinations {
+section {
   background-color: #a8cdf8;
   margin: 0 auto;
   padding: 35px 15px;
   text-align: center;
 }
 
-.destinations-header h2 {
+section h2 {
   padding-bottom: 15px;
 }
 
-.destinations-header h2,
+section h2,
 .destinations h3 {
   text-align: center;
   margin: 0 auto;
@@ -205,6 +200,33 @@ section .destination-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5px;
+  }
+}
+
+section.socials {
+  background-color: white;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.embeds {
+  max-width: 1000px;
+}
+.embed-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+}
+
+.embeds {
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .embed-grid {
+    display: inline-block;
+    margin: 0 auto;
   }
 }
 
