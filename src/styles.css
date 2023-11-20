@@ -88,7 +88,8 @@ section {
   text-align: center;
 }
 
-section.intro {
+section.intro,
+section.state-table {
   background-color: white;
 }
 
@@ -198,8 +199,22 @@ section .destination-grid {
   }
 }
 
+section.state-table {
+  padding-bottom: 25px;
+}
+
+table {
+  margin: 0 auto;
+  border: 1px solid var(--main-color);
+}
+
+th,
+td {
+  border: 1px solid var(--main-color);
+  padding: 5px 5px;
+}
+
 section.social-photos {
-  background-color: white;
   margin: 0 auto;
   text-align: center;
   justify-content: center;
